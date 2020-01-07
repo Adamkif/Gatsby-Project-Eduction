@@ -1,0 +1,52 @@
+@import "../sass/main.scss";
+.features {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  .iconsFeatures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+
+    .icon {
+      width: 60px;
+      height: 70px;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .features {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    h1 {
+      font-size: 30px;
+    }
+    .iconsFeatures {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 1rem;
+      div {
+        border-bottom: 1px $main-color solid;
+        padding-bottom: 1rem;
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+
+        .icon {
+          width: 30px;
+          height: 50px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

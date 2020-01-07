@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+
+$website-width: 1280px;
+$main-color: #27ae60;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url("../images/background.png");
+// Generall Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  // hidden nothing goes outside container
+  overflow: hidden;
+}
+.text-center {
+  text-align: center;
+}
+.lead {
+  margin-bottom: 1rem;
+}
+%btn-shared {
+  display: inline-block;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: $light-color;
+    background-color: $main-color;
+    padding: 0.7rem 1.5rem;
+    border-radius: 27.5px;
+    &:hover {
+      background-color: $light-color;
+      color: $main-color;
+    }
+  }
+  &-large {
+    @extend %btn-shared;
+    color: $light-color;
+    background-color: $main-color;
+    width: 270px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 25px;
+
+    &:hover {
+      color: $light-color;
+      opacity: 0.9;
+    }
+  }
+}
+.youtube-icon {
+  color: #c4302b;
+}
+.twitter-icon {
+  color: #1dcaff;
+}
+.github-icon {
+  color: $light-color;
+}
+
+.bottom-line-w360 {
+  height: 2px;
+  width: 360px;
+  background: gray;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.bottom-line-w245 {
+  height: 2px;
+  width: 245px;
+  background: gray;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-4 {
+  padding: 4rem 0;
+}
+.bg-dark {
+  background: $dark-color;
+  color: #fff;
+}
+.bg-green {
+  background: $medium-color;
+  color: $main-color;
+}
+.faiconContact {
+  font-size: 2rem;
+}
+
+.teacher {
+  text-align: center;
+  margin-bottom: 20px;
+  h1 {
+    font-size: 40px;
+  }
+}
