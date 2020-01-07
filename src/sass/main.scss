@@ -133,3 +133,23 @@ ul {
     font-size: 40px;
   }
 }
+.bg-gatsby {
+  background: no-repeat center right / cover;
+  height: 100vh;
+  color: white;
+}
+.bg-gatsby-others {
+  background: no-repeat 20% 30% / cover;
+  height: 8rem;
+  border-bottom: 3px solid $main-color;
+}
+@media (max-width: 500px) {
+  .bg-gatsby {
+    background: no-repeat 20% 30% / cover;
+    height: 6rem;
+    border-bottom: 3px solid $main-color;
+  }
+  .bg-gatsby-others {
+    height: 6rem;
+  }
+}

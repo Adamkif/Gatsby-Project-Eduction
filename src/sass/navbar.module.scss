@@ -35,10 +35,8 @@
     }
   }
 }
+
 .header-home {
-  background: $bg-image no-repeat center right / cover;
-  height: 100vh;
-  color: white;
   .header-content {
     text-align: center;
     padding-top: 25%;
@@ -92,9 +90,6 @@
     }
   }
   .header-home {
-    background: $bg-image no-repeat 20% 30% / cover;
-    height: 6rem;
-    border-bottom: 3px solid $main-color;
     .header-content {
       display: none;
     }

@@ -6,6 +6,8 @@ import Footer from "../components/footer"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import "../sass/courses.scss"
+import BackgroundImage from "gatsby-background-image"
+
 const getData = graphql`
   {
     image1: file(relativePath: { eq: "1.png" }) {
@@ -29,6 +31,14 @@ const getData = graphql`
         }
       }
     }
+
+    image4: file(relativePath: { eq: "background.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1280) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 const Courses = () => {
@@ -36,37 +46,40 @@ const Courses = () => {
   const Image1 = data.image1.childImageSharp.fluid
   const Image2 = data.image2.childImageSharp.fluid
   const Image3 = data.image3.childImageSharp.fluid
+  const Image4 = data.image4.childImageSharp.fluid
   return (
     <>
-      <header className={styles.headerOthers}>
-        <div className="container">
-          <nav className={styles.mainNav}>
-            <div className={styles.education}>
-              <img src={img} alt="MyLogo" className={styles.logo} />
-              <h1>EDUCATION</h1>
-            </div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/courses" className={styles.current}>
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs">Programs</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/contact/">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <BackgroundImage className="bg-gatsby-others" fluid={Image4}>
+        <header>
+          <div className="container">
+            <nav className={styles.mainNav}>
+              <div className={styles.education}>
+                <img src={img} alt="MyLogo" className={styles.logo} />
+                <h1>EDUCATION</h1>
+              </div>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/courses" className={styles.current}>
+                    Courses
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/programs">Programs</Link>
+                </li>
+                <li>
+                  <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/contact/">Contact</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </BackgroundImage>
       <section className="course">
         <div className="container">
           <div className="text-center">
