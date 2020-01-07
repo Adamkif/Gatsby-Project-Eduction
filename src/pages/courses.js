@@ -34,7 +34,7 @@ const getData = graphql`
 
     image4: file(relativePath: { eq: "background.png" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 1280) {
+        fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
